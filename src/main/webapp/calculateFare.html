@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculate Fare</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+
+        form {
+            max-width: 300px;
+            margin: 0 auto;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input[type="text"],
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Calculate Fare</h2>
+    <form action="/calculateFare" method="post"> 
+        <label for="fromLocation">From Location:</label>
+        <input type="text" id="fromLocation" name="fromLocation" required>
+
+        <label for="toLocation">To Location:</label>
+        <input type="text" id="toLocation" name="toLocation" required>
+
+        <label for="cabType">Type of Cab:</label>
+        <select id="cabType" name="cabType">
+            <option value="standard">Standard</option>
+            <option value="premium">Premium</option>
+            <option value="luxury">Luxury</option>
+        </select>
+
+        <input type="submit" value="Calculate">
+    </form>
+</body>
+
+</html>
